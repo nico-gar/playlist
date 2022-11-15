@@ -14,6 +14,7 @@ class SongTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        SongController.shared.loadFromPersistenceStore()
     }
 
     @IBAction func addSongButtonTapped(_ sender: Any) {
