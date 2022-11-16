@@ -16,3 +16,12 @@ class Playlist: Codable {
         self.songs = songs
     }
 }
+
+
+extension Playlist: Equatable {
+    static func == (lhs: Playlist, rhs: Playlist) -> Bool {
+        return lhs.name == rhs.name && lhs.songs == rhs.songs
+    }
+    
+    
+}

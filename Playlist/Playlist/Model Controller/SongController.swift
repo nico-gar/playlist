@@ -9,59 +9,22 @@ import Foundation
 
 class SongController {
     
-    //    Shared Instance
-    static let shared = SongController()
-    
-    //    Source of Truth (the main point of data for this application)
-    var songs: [Song] = []
-    
-    
     //    CRUD
     
     //    Create
-    func createSong(title: String, artistName: String) {
+    static func createSong(title: String, artistName: String, playlist: Playlist) {
         let newSong = Song(title: title, artistName: artistName)
-        songs.append(newSong)
-        saveToPersistenceStore()
+        playlist.songs.append(newSong)
+        PlaylistController.shared.saveToPersistenceStore()
     }
     
     
     //    Delete
-    func deleteSong(song: Song) {
-        guard let index = songs.firstIndex(of: song) else { return }
-        songs.remove(at: index)
-        saveToPersistenceStore()
+    static func deleteSong(song: Song, playlist: Playlist) {
+        guard let index = playlist.songs.firstIndex(of: song) else { return }
+        playlist.songs.remove(at: index)
+        PlaylistController.shared.saveToPersistenceStore()
     }
     
-    //  MARK: - Persistence
 
-    //  Persistence Store
-    func persistentStore() -> URL {
-        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        let fileURL = urls[0].appendingPathComponent("Playlist.json")
-        return fileURL
-    }
-
-    //  Save
-    func saveToPersistenceStore(){
-        do {
-            let data = try JSONEncoder().encode(songs)
-            try data.write(to: persistentStore())
-        } catch {
-            print("We had an error saving to our persistence store.")
-            print(error)
-            print(error.localizedDescription)
-        }
-    }
-    //  Load
-    func loadFromPersistenceStore() {
-        do {
-            let data = try Data(contentsOf: persistentStore())
-            songs = try JSONDecoder().decode([Song].self, from: data)
-        } catch {
-            print("We had an error loading our data from the persistence store.")
-            print(error)
-            print(error.localizedDescription)
-        }
-    }
 }

@@ -1,11 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WSx-La-lnW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1sB-oD-pgo">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Playlists View Controller-->
+        <scene sceneID="dJa-oq-kQe">
+            <objects>
+                <viewController id="JhX-pV-lsd" customClass="PlaylistsViewController" customModule="Playlist" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lZA-Zk-zpP">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WAM-WI-375">
+                                <rect key="frame" x="32" y="202" width="361" height="584"/>
+                                <color key="backgroundColor" red="0.40609052200000001" green="0.67670623949999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="playlistCell" textLabel="0rv-d3-jNz" detailTextLabel="c2B-qJ-OKp" style="IBUITableViewCellStyleValue1" id="KUU-Ed-hKa">
+                                        <rect key="frame" x="0.0" y="50" width="361" height="51.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KUU-Ed-hKa" id="KQQ-KV-kpa">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="51.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0rv-d3-jNz">
+                                                    <rect key="frame" x="20.000000000000004" y="13" width="37.333333333333336" height="26"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c2B-qJ-OKp">
+                                                    <rect key="frame" x="289.66666666666669" y="13" width="51.333333333333336" height="26"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.40609052200000001" green="0.67670623949999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="SyH-kD-Qdd" kind="show" identifier="toSongsList" id="0iw-5m-gfg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d3x-tY-U8t">
+                                <rect key="frame" x="0.0" y="103" width="393" height="67"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iMw-fC-oxP">
+                                        <rect key="frame" x="244.33333333333337" y="16" width="132.66666666666663" height="35"/>
+                                        <color key="backgroundColor" red="0.90474086229999995" green="0.58615352840000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Create Playlist">
+                                            <backgroundConfiguration key="background" cornerRadius="16">
+                                                <color key="backgroundColor" red="0.90474086229999995" green="0.58615352840000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="addPlaylistButtonTapped:" destination="JhX-pV-lsd" eventType="touchUpInside" id="4rO-47-EiQ"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Playlist Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V3Y-hn-Vaw">
+                                        <rect key="frame" x="16" y="16.666666666666671" width="212.33333333333334" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.40609052200000001" green="0.67670623949999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="iMw-fC-oxP" firstAttribute="leading" secondItem="V3Y-hn-Vaw" secondAttribute="trailing" constant="16" id="DjO-mc-eMD"/>
+                                    <constraint firstItem="V3Y-hn-Vaw" firstAttribute="centerY" secondItem="d3x-tY-U8t" secondAttribute="centerY" id="LC6-8C-dgJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="iMw-fC-oxP" secondAttribute="trailing" constant="16" id="Oc8-sB-O91"/>
+                                    <constraint firstAttribute="bottom" secondItem="iMw-fC-oxP" secondAttribute="bottom" constant="16" id="dvi-2B-XyK"/>
+                                    <constraint firstItem="V3Y-hn-Vaw" firstAttribute="leading" secondItem="d3x-tY-U8t" secondAttribute="leading" constant="16" id="fNN-nv-NPT"/>
+                                    <constraint firstItem="iMw-fC-oxP" firstAttribute="top" secondItem="d3x-tY-U8t" secondAttribute="top" constant="16" id="zMj-oh-qf0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4Jt-7p-PBz"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="d3x-tY-U8t" firstAttribute="leading" secondItem="4Jt-7p-PBz" secondAttribute="leading" id="0bs-8X-N3y"/>
+                            <constraint firstItem="4Jt-7p-PBz" firstAttribute="trailing" secondItem="WAM-WI-375" secondAttribute="trailing" id="UT1-Pj-rV9"/>
+                            <constraint firstItem="d3x-tY-U8t" firstAttribute="top" secondItem="4Jt-7p-PBz" secondAttribute="top" id="YEv-2l-7Cu"/>
+                            <constraint firstItem="WAM-WI-375" firstAttribute="top" secondItem="d3x-tY-U8t" secondAttribute="bottom" constant="32" id="Yf6-yp-ngb"/>
+                            <constraint firstItem="4Jt-7p-PBz" firstAttribute="bottom" secondItem="WAM-WI-375" secondAttribute="bottom" constant="32" id="fDL-3L-uXX"/>
+                            <constraint firstItem="WAM-WI-375" firstAttribute="leading" secondItem="4Jt-7p-PBz" secondAttribute="leading" constant="32" id="nbd-7u-EAC"/>
+                            <constraint firstItem="4Jt-7p-PBz" firstAttribute="trailing" secondItem="d3x-tY-U8t" secondAttribute="trailing" id="vaa-Ub-yAL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tQk-mS-29I"/>
+                    <connections>
+                        <outlet property="playlistNameTextField" destination="V3Y-hn-Vaw" id="mas-Wb-JYB"/>
+                        <outlet property="playlistTableView" destination="WAM-WI-375" id="lCt-Wz-hBI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QIx-EH-69W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="168.70229007633588" y="24.647887323943664"/>
+        </scene>
         <!--My Playlist-->
         <scene sceneID="cOq-xk-xMe">
             <objects>
@@ -88,25 +187,25 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mwC-FK-x8c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5.343511450381679" y="24.647887323943664"/>
+            <point key="canvasLocation" x="921.37404580152668" y="24.647887323943664"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="ada-9p-uaB">
+        <scene sceneID="im4-oC-9gW">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WSx-La-lnW" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1sB-oD-pgo" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SJ6-Ui-xz6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ehn-gO-6we">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="SyH-kD-Qdd" kind="relationship" relationship="rootViewController" id="qBa-IA-BDI"/>
+                        <segue destination="JhX-pV-lsd" kind="relationship" relationship="rootViewController" id="hXU-Mi-hsU"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2JU-zh-9Lj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fsI-rD-INM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-769" y="25"/>
+            <point key="canvasLocation" x="-758.01526717557249" y="24.647887323943664"/>
         </scene>
     </scenes>
 </document>
