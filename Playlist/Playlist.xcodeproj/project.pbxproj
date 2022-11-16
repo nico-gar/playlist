@@ -15,6 +15,7 @@
 		1C7C26C52922DF2C00E70F63 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C26C42922DF2C00E70F63 /* Song.swift */; };
 		1C7C26C82922E35700E70F63 /* SongController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C26C72922E35700E70F63 /* SongController.swift */; };
 		1C7C26CB2922E58C00E70F63 /* SongTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C26CA2922E58C00E70F63 /* SongTableViewController.swift */; };
+		1CAA3EF72925213D0003C0A4 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAA3EF62925213D0003C0A4 /* Playlist.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		1C7C26C42922DF2C00E70F63 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		1C7C26C72922E35700E70F63 /* SongController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongController.swift; sourceTree = "<group>"; };
 		1C7C26CA2922E58C00E70F63 /* SongTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewController.swift; sourceTree = "<group>"; };
+		1CAA3EF62925213D0003C0A4 /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				1C7C26C42922DF2C00E70F63 /* Song.swift */,
+				1CAA3EF62925213D0003C0A4 /* Playlist.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				1C7C26AE2922BBF600E70F63 /* AppDelegate.swift in Sources */,
 				1C7C26C82922E35700E70F63 /* SongController.swift in Sources */,
 				1C7C26B02922BBF600E70F63 /* SceneDelegate.swift in Sources */,
+				1CAA3EF72925213D0003C0A4 /* Playlist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
